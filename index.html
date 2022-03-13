@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* reset browser default margin */
+      * {
+        margin: 0;
+      }
+
+      .scroll-parent {
+        /* make the container overflow vertically */
+        height: 100vh;
+        overflow-y: auto;
+
+        /* define scroll snap behaviour */
+        scroll-snap-type: y mandatory;
+      }
+      .scroll-child {
+        /* adjust based on desired behaviour */
+        scroll-snap-align: start; /* start or center or end */
+
+        /* add for a slideshow-like feel */
+        height: 100vh;
+
+        /* center the child text */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scroll-parent">
+      <div class="scroll-child">
+        <p>Lorem Ipsum 1</p>
+      </div>
+      <div class="scroll-child">
+        <p>Lorem Ipsum 2</p>
+      </div>
+      <div class="scroll-child">
+        <p>Lorem Ipsum 3</p>
+      </div>
+    </div>
+  </body>
+</html>
